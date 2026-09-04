@@ -6,7 +6,7 @@ ReactJS with Vite
 
 TODO
 
-Add some unit tests for Jenkins
+Add some unit tests
 Standardize CSS class names
 Why are actions getting multiple calls?
 Capitalize folders and component names?
