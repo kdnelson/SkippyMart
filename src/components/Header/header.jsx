@@ -37,7 +37,7 @@ const Header = () => {
       {screenSize >= MAX_MEDIA_SIZE_DESKTOP && (
         <div class="d-flex flex-wrap align-items-start">
           <div className="p-1 ps-2 pe-2">
-            <div><Link className="logo-style" to="/">Skippyzon</Link></div>
+            <div><Link className="logo-style" to="/">SkippyMart</Link></div>
             <div className="header-version">{reactJsVersion}</div>
           </div>
           <div className="d-flex mt-1">
@@ -72,8 +72,8 @@ const Header = () => {
         <div class="row">
           <div class="d-flex flex-wrap align-items-start">
             <div className="p-1 ps-2 pe-2">
-              <div><Link className="logo-style" to="/">Skippyzon</Link></div>
-            <div className="header-version">{reactJsVersion}</div>
+              <div><Link className="logo-style" to="/">SkippyMart</Link></div>
+              <div className="header-version">{reactJsVersion}</div>
             </div>
             <div class="d-flex mt-1">
               <input className="mt-2 tablet-searchbar" type="text" onChange={(e) => setProductQuery(e.target.value)}/>
@@ -109,8 +109,8 @@ const Header = () => {
         <div class="row">
           <div class="d-flex flex-wrap align-items-start">
             <div className="p-1 ps-2 pe-2">
-              <div><Link className="logo-style" to="/">Skippyzon</Link></div>
-            <div className="header-version">{reactJsVersion}</div>
+              <div><Link className="logo-style" to="/">SkippyMart</Link></div>
+              <div className="header-version">{reactJsVersion}</div>
             </div>
             <div class="d-flex mt-1">
               <input className="mt-2 phone-searchbar" type="text" onChange={(e) => setProductQuery(e.target.value)}/>

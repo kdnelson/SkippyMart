@@ -1,4 +1,4 @@
-# Skippyzon
+# SkippyMart
 
 ReactJS with Vite
 
@@ -6,6 +6,8 @@ ReactJS with Vite
 
 TODO
 
+Update packages
+Optimize header to not repeat HTML for each size?
 Add some unit tests
 Standardize CSS class names
 Why are actions getting multiple calls?
