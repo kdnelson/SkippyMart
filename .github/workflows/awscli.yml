@@ -9,9 +9,25 @@ on:
       - main
   workflow_dispatch:
 
+permissions:
+  contents: read
+  id-token: write
+  pull-requests: write
+  actions: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: login to AWS
-        run: echo "Logging in to AWS..."
+      - name: Setup AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v2
+        with:
+          role-to-assume: ${{ secrets.IAM_ROLE }}
+          aws-region: ${{ secrets.AWS_REGION }}
+      
+      - name: List S3 buckets
+        env:
+          AWS_REGION: ${{ secrets.AWS_REGION }}
+        run: |
+          aws s3 ls
+          
