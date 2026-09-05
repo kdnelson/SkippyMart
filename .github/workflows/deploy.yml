@@ -22,6 +22,9 @@ jobs:
           role-to-assume: arn:aws:iam::824333227939:role/skippymart
           aws-region: us-west-2
 
+      - name: Print Identity Details
+        run: aws sts get-caller-identity
+
       - name: List S3 buckets
         env:
           AWS_REGION: us-west-2
