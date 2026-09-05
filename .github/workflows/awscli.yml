@@ -1,0 +1,20 @@
+name: SkippyMart
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  WORKFLOW_DISPATCH:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: login to AWS
+        uses: aws-actions/configure-aws-credentials@v2
+        run: |
+          echo "Logging in to AWS..."
