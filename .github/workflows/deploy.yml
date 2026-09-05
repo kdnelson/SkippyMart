@@ -16,14 +16,16 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v4
 
-      - name: Print Identity Details
-        run: aws sts get-caller-identity
-
       - name: Setup AWS Credentials
         uses: aws-actions/configure-aws-credentials@v4
         with:
           role-to-assume: arn:aws:iam::824333227939:role/skippymart
           aws-region: us-west-2
+          audience: ://amazonaws.com
+
+      - name: Run aws sts get-caller-identity
+        run: |
+          aws sts get-caller-identity
 
       - name: List S3 buckets
         env:
