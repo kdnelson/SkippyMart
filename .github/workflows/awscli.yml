@@ -22,6 +22,7 @@ jobs:
         with:
           role-to-assume: ${{ secrets.IAM_ROLE }}
           aws-region: ${{ secrets.AWS_REGION }}
+          audience: ${{ secrets.AUDIENCE }}
 
       - name: List S3 buckets
         env:
