@@ -4,29 +4,27 @@ on:
   push:
     branches:
       - main
-  pull_request:
-    branches:
-      - main
-  workflow_dispatch:
 
 permissions:
   id-token: write
   contents: read
   
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
       - name: Setup AWS Credentials
         uses: aws-actions/configure-aws-credentials@v4
         with:
-          role-to-assume: ${{ secrets.IAM_ROLE }}
-          aws-region: ${{ secrets.AWS_REGION }}
-          audience: ${{ secrets.AUDIENCE }}
+          role-to-assume: arn:aws:iam::824333227939:role/skippymart
+          aws-region: us-west-2
 
       - name: List S3 buckets
         env:
-          AWS_REGION: ${{ secrets.AWS_REGION }}
+          AWS_REGION: us-west-2
         run: |
           aws s3 ls
           
