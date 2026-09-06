@@ -1,3 +1,0 @@
-variable "website" {
-  type        = string
-}
