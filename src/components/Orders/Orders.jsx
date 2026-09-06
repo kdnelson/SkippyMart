@@ -1,4 +1,4 @@
-import './orders1.scss'
+import './orders.scss'
 import { useTranslation } from 'react-i18next'
 import OrderItems from '../OrderItem/OrderItem.jsx'
 import { useOrder } from '../../hooks/index.jsx'
