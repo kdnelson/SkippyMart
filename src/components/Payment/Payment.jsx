@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import './payment.scss'
+import './payment1.scss'
 import { useTranslation } from 'react-i18next'
 import OrderTotal from '../OrderTotal/OrderTotal.jsx'
 import { useUser, useCart } from '../../hooks/index.jsx'
