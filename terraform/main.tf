@@ -7,7 +7,7 @@ resource "aws_s3_bucket" "skippymart" {
 }
 
 resource "aws_s3_bucket_website_configuration" "skippymart" {
-  bucket = var.static-website.id
+  bucket = var.static-website
 
   index_document {
     suffix = "index.html"
