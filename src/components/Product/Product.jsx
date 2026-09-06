@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import './product1.scss'
+import './product.scss'
 import { useTranslation } from 'react-i18next'
 import { useNavigate } from 'react-router-dom'
 import { useCart } from '../../hooks'

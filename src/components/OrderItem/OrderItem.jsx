@@ -1,4 +1,4 @@
-import './orderItem1.scss'
+import './orderItem.scss'
 import { useTranslation } from 'react-i18next'
 import OrderDetails from '../OrderDetails/OrderDetails.jsx'
 import { NumericFormat } from 'react-number-format';
