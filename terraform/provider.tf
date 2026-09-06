@@ -13,7 +13,7 @@ terraform {
   backend "s3" {
     bucket = "skippymart-tf-state"
     key    = "terraform.tfstate"
-    region = var.aws-region
+    region = "us-west-2"
     encrypt = true
     use_lockfile = true
   }
