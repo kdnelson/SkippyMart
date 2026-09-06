@@ -62,4 +62,4 @@ jobs:
       
       - name: Sync dist to S3 Bucket
         run: |
-          aws s3 sync ./dist s3://${{ secrets.BUCKET_NAME }} --delete --region ${{ secrets.AWS_REGION }}
+          aws s3 sync ./dist s3://${{ env.BUCKET_NAME }} --delete --region us-west-2
