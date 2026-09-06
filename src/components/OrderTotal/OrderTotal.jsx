@@ -1,4 +1,4 @@
-import './ordertotal.scss'
+import './orderTotal.scss'
 import { useTranslation } from 'react-i18next'
 import { NumericFormat } from 'react-number-format';
 import { useCart, useOrder } from '../../hooks'
