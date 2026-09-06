@@ -1,6 +1,6 @@
 import './Orders.scss'
 import { useTranslation } from 'react-i18next'
-import OrderItems from '../OrderItem/OrderItem.jsx'
+import OrderItems from '../OrderItem/OrderItemTEMP.jsx'
 import { useOrder } from '../../hooks/index.jsx'
 
 const Orders = () => {

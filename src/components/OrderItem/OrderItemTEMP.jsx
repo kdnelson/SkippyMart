@@ -1,6 +1,6 @@
 import './OrderItem.scss'
 import { useTranslation } from 'react-i18next'
-import OrderDetails from '../OrderDetails/OrderDetails.jsx'
+import OrderDetails from '../OrderDetails/OrderDetailsTEMP.jsx'
 import { NumericFormat } from 'react-number-format';
 import { useCart } from '../../hooks/index.jsx'
 
