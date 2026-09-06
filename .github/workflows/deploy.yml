@@ -48,11 +48,8 @@ jobs:
 
       - name: Terraform Plan
         env:
-          BUCKET_NAME: ${{ secrets.BUCKET_NAME }}
-        run: |
-          terraform plan \
-            -var="bucket_name=${static-website}" \
-            -out=tfplan
+          TF_VAR_bucket_name: ${{ secrets.BUCKET_NAME }}
+        run: terraform plan -out=tfplan
         working-directory: terraform
 
       - name: Terraform Apply
