@@ -1,10 +1,10 @@
 import './App.scss';
 import './i18n'
-import Header from './components/Header/header'
-import Home from './components/Home/home'
-import Login from './components/Login/login'
-import Checkout from './components/Checkout/checkout'
-import Payment from './components/Payment/payment'
+import Header from './components/Header/Header'
+import Home from './components/Home/Home'
+import Login from './components/Login/Login'
+import Checkout from './components/Checkout/Checkout'
+import Payment from './components/Payment/Payment'
 import Orders from './components/Orders/Orders'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
