@@ -51,7 +51,7 @@ jobs:
           BUCKET_NAME: ${{ secrets.BUCKET_NAME }}
         run: |
           terraform plan \
-            -var="bucket_name=${BUCKET_NAME}" \
+            -var="bucket_name=${static-website}" \
             -out=tfplan
         working-directory: terraform
 
