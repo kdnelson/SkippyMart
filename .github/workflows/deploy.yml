@@ -53,8 +53,6 @@ jobs:
         working-directory: terraform
 
       - name: Terraform Apply
-        env: 
-          BUCKET_NAME: ${{ secrets.BUCKET_NAME }} 
         run: terraform apply -auto-approve tfplan
         working-directory: terraform
 
