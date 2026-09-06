@@ -10,7 +10,7 @@ permissions:
   contents: read
   
 jobs:
-  deploy:
+  create_bucket:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
@@ -27,9 +27,26 @@ jobs:
         run: |
           aws sts get-caller-identity
 
-      - name: List S3 buckets
+      - name: Install Terraform
+        uses: hashicorp/setup-terraform@v2
+        with:
+          terraform_version: 1.7.6
+
+      - name: Terraform Init
+        run: terraform init
+        working-directory: terraform
+
+      - name: Terraform Plan
         env:
-          AWS_REGION: ${{ secrets.AWS_REGION }}
+          BUCKET_NAME: ${{ secrets.BUCKET_NAME }}
         run: |
-          aws s3 ls
-          
+          terraform plan \
+            -var="bucket_name=${BUCKET_NAME}" \
+            -out=tfplan
+        working-directory: terraform
+
+      - name: Terraform Apply
+        env: 
+          BUCKET_NAME: ${{ secrets.BUCKET_NAME }} 
+        run: terraform apply -auto-approve tfplan
+        working-directory: terraform    
