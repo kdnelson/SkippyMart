@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import './payment.scss'
 import { useTranslation } from 'react-i18next'
-import OrderTotal from '../OrderTotal/OrderTotalTEMP.jsx'
+import OrderTotal from '../OrderTotal/OrderTotal.jsx'
 import { useUser, useCart } from '../../hooks/index.jsx'
 import { useNavigate } from 'react-router-dom'
 
