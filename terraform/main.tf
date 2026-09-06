@@ -7,7 +7,7 @@ resource "aws_s3_bucket" "skippymart" {
 }
 
 resource "aws_s3_bucket_website_configuration" "skippymart" {
-  bucket = var.static-website
+  bucket = aws_s3_bucket.skippymart.id
 
   index_document {
     suffix = "index.html"
@@ -19,7 +19,7 @@ resource "aws_s3_bucket_website_configuration" "skippymart" {
 }
 
 resource "aws_s3_bucket_public_access_block" "skippymart" {
-  bucket = var.static-website.id
+  bucket = aws_s3_bucket.skippymart.id
 
   block_public_acls       = false
   block_public_policy     = false
@@ -28,8 +28,8 @@ resource "aws_s3_bucket_public_access_block" "skippymart" {
 }
 
 resource "aws_s3_bucket_policy" "public_read" {
-  depends_on = [aws_s3_bucket_public_access_block.var.static-website]
-  bucket = aws_s3_bucket.var.static-website.id
+  depends_on = [aws_s3_bucket_public_access_block.skippymart]
+  bucket = aws_s3_bucket.skippymart.id
 
   policy = jsonencode({
     Version = "2012-10-17"
@@ -39,7 +39,7 @@ resource "aws_s3_bucket_policy" "public_read" {
         Effect    = "Allow"
         Principal = "*"
         Action    = "s3:GetObject"
-        Resource  = "${aws_s3_bucket.var.static-website.arn}/*"
+        Resource  = "${aws_s3_bucket.skippymart.arn}/*"
       }
     ]
   })
