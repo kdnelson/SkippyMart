@@ -15,6 +15,6 @@ terraform {
     key    = "terraform.tfstate"
     region = "us-west-2"
     encrypt = true
-    use_lockfile = "skippymart-tf-lock"
+    use_lockfile = true
   }
 }
