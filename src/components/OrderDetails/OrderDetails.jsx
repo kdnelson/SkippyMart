@@ -1,4 +1,4 @@
-import './orderDetails.scss'
+import './orderDetails1.scss'
 import { useTranslation } from 'react-i18next'
 import { useCart } from '../../hooks'
 
