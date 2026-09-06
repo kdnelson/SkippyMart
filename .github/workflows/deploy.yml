@@ -56,6 +56,10 @@ jobs:
         run: terraform apply -auto-approve tfplan
         working-directory: terraform
 
+      - name: Debug Bucket Name Secret
+        run: |
+          echo "The secret contains exactly: ->$(echo "${{ secrets.BUCKET_NAME }}" | sed 's/./& /g')<-"
+      
       - name: Sync dist to S3 Bucket
         run: |
           aws s3 sync ./dist s3://${{ secrets.BUCKET_NAME }} --delete --region ${{ secrets.AWS_REGION }}
