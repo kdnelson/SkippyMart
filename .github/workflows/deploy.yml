@@ -60,11 +60,10 @@ jobs:
         run: |
           echo "The secret contains exactly: ->$(echo "${{ secrets.BUCKET_NAME }}" | sed 's/./& /g')<-"
       
-      - name: List Real AWS Buckets
+      - name: List Account S3 Buckets
         run: |
-          echo "=== Listing all S3 buckets in your AWS Account ==="
           aws s3 ls
 
       - name: Sync dist to S3 Bucket
         run: |
-          aws s3 sync ./dist s3://${{ secrets.BUCKET_NAME }} --delete --region us-west-2
+          aws s3 sync ./dist s3://skippymart --delete --region us-west-2
