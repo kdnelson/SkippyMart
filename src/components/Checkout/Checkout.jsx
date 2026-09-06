@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import './Checkout.scss'
+import './checkout.scss'
 import { useTranslation } from 'react-i18next'
 import Subtotal from '../Subtotal/SubtotalTEMP.jsx'
 import { useNavigate } from 'react-router-dom'

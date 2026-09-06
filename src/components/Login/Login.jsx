@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import './Login.scss'
+import './login.scss'
 import { useTranslation } from 'react-i18next'
 import { useNavigate } from 'react-router-dom'
 import { useUser } from '../../hooks'

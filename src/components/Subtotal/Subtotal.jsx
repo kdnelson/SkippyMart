@@ -1,4 +1,4 @@
-import './Subtotal.scss'
+import './subtotal.scss'
 import { useTranslation } from 'react-i18next'
 import { NumericFormat } from 'react-number-format';
 import { useNavigate } from 'react-router-dom'
