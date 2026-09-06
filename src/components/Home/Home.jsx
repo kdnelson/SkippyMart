@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import './home.scss'
+import './home2.scss'
 import Product from '../Product/Product.jsx'
 import { useProduct } from '../../hooks/index.jsx'
 
