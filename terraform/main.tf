@@ -1,7 +1,7 @@
 resource "aws_s3_bucket" "skippymart" {
-  bucket = var.static-website
+  bucket = var.website
   tags = {
-    Name        = var.static-website
+    Name        = var.website
     Environment = "Dev"
   }
 }

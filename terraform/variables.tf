@@ -1,4 +1,4 @@
-variable "static-website" {
+variable "website" {
   type        = string
   default     = "skippymart"
 }
