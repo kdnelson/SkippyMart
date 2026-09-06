@@ -1,7 +1,7 @@
 import './OrderItem.scss'
 import { useTranslation } from 'react-i18next'
 import OrderDetails from '../OrderDetails/OrderDetails.jsx'
-import CurrencyFormat from 'react-currency-format'
+import { NumericFormat } from 'react-number-format';
 import { useCart } from '../../hooks/index.jsx'
 
 const OrderItem = (props) => {
@@ -11,7 +11,7 @@ const OrderItem = (props) => {
   return (
     <>
       <div className="row fs-5 mt-5 fw-bold">{t('orderitems.orderId')}: {id}</div>
-      <CurrencyFormat renderText={(value) => (
+      <NumericFormat renderText={(value) => (
         <div className="row fs-5 fw-bold">{t('orderitems.total')}: {value}</div>
       )}
           decimalScale={2}

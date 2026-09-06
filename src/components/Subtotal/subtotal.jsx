@@ -1,6 +1,6 @@
 import './Subtotal.scss'
 import { useTranslation } from 'react-i18next'
-import CurrencyFormat from 'react-currency-format'
+import { NumericFormat } from 'react-number-format';
 import { useNavigate } from 'react-router-dom'
 import { useCart } from '../../hooks'
 
@@ -14,7 +14,7 @@ const Subtotal = () => {
       <div className="row justify-content-end">
         <div className="card h-100 bg-body rounded subtotal-card">
           <div className="card-body">
-            <CurrencyFormat renderText={(value) => (
+            <NumericFormat renderText={(value) => (
                 <h4>{t('subtotal.subTotal')} ({cart.length} {t('subtotal.items')}): {value}</h4>
               )}
                 decimalScale={2}
