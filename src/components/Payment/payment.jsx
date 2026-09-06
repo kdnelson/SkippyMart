@@ -2,7 +2,7 @@ import { useEffect } from 'react'
 import './Payment.scss'
 import { useTranslation } from 'react-i18next'
 import OrderTotal from '../OrderTotal/OrderTotal.jsx'
-import { useUser, useCart } from '../../hooks'
+import { useUser, useCart } from '../../hooks/index.jsx'
 import { useNavigate } from 'react-router-dom'
 
 const Payment = () => {

@@ -8,7 +8,7 @@ import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket'
 import {
   MAX_MEDIA_SIZE_DESKTOP,
   MAX_MEDIA_SIZE_PHONE,
-} from './../../constants'
+} from '../../constants'
 import { Link } from 'react-router-dom'
 import { useUser, useCart, useProduct, useOrder } from '../../hooks'
 import 'bootstrap/dist/css/bootstrap.min.css'

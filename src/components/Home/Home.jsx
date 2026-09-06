@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 import './Home.scss'
-import Product from '../Product/product.jsx'
+import Product from '../Product/Product.jsx'
 import { useProduct } from '../../hooks/index.jsx'
 
 const Home = () => {
